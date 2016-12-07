@@ -12,6 +12,7 @@ var resetButton = document.querySelector(".reset-button");
 guessSubmit.addEventListener('click', function() {
   lastGuess.innerText = guessedNumber.value;
   compareGuess();
+  alertMessage();
  });
 
 
@@ -20,7 +21,8 @@ function compareGuess () {
 
   if (guessed === randomNumber) {
     tooHighLow.innerText = "BOOM!";
-  } else if (guessed> randomNumber) {
+    tooHighLow.innerHTML = "";
+  } else if (guessed > randomNumber) {
     tooHighLow.innerText = "Too high! Try again!";
   } else if (guessed < randomNumber) {
     tooHighLow.innerText = "Too low! Try again!";
@@ -40,19 +42,17 @@ clearFieldButton.addEventListener('click', function() {
  });
 
 
- function alterHighLow () {
-  var guessed = parseInt(guessedNumber.value);
-   if (guessed < 0) {
-     tooHighLow.innerText = "";
-     alert('Guess a number between 0-100!');
-   } else if (guessed > 100) {
-     tooHighLow.innerText = "";
-     alert('Guess a number between 0-100!');
-   }
- };
-
-
 function randoNumber() {
   var randomNumber = Math.floor(Math.random() * 100 + 1)
   return randomNumber;
+};
+
+
+function alertMessage () {
+  var guessed = parseInt(guessedNumber.value);
+  if (guessed < 0) {
+    alert ("ERROR: Enter a number between 0-100");
+  } else if (guessed > 100) {
+    alert ("ERROR: Enter a number between 0-100");
+  }
 };
