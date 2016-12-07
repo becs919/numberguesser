@@ -43,6 +43,12 @@ section {
 
 button:hover {
   background-color: #EB008B;
+
+}
+
+button:disabled {
+  background-color: #E6E7E8;
+
 }
 
 button:active {
