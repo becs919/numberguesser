@@ -33,6 +33,9 @@ function compareGuess () {
     tooHighLow.innerText = "Too high! Try again!";
   } else if (guessed < randomNumber) {
     tooHighLow.innerText = "Too low! Try again!";
+  } else  {
+    alert ("ERROR: Enter a number between 0-100");
+    empltyAllFields();
   }
 };
 
