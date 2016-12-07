@@ -13,6 +13,9 @@ var newMinValue = document.getElementById("min");
 var newMaxValue = document.getElementById("max");
 var newValueButton = document.querySelector(".new-value-button");
 
+var mainMax = 100;
+var mainMin = 0;
+
 
 
 // Submit Button Event Listener
@@ -98,3 +101,23 @@ function newRandomNumber(min, max) {
   max = Math.floor(newMaxValue);
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+function changeMin() {
+  if (newMinValue.value > 0) {
+    newMinValue.value = mainMin;
+  } else {
+    newMinValue.value = 0;
+  }
+};
+
+function changeMax() {
+  if (newMaxValue.value > 100) {
+    newMaxValue.value = mainMax;
+  } else {
+    newMaxValue.value = 100;
+  }
+};
+
+// newValueButton.addEventListener("click", function(){
+//
+// });
