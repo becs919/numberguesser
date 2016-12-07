@@ -9,6 +9,10 @@ var guessedNumber = document.getElementById("number-guesser");
 var clearFieldButton = document.querySelector(".clear-field");
 var resetButton = document.querySelector(".reset-button");
 
+var newMinValue = document.getElementById("min");
+var newMaxValue = document.getElementById("max");
+var newValueButton = document.querySelector(".new-value-button");
+
 
 
 // Submit Button Event Listener
@@ -20,7 +24,7 @@ guessSubmit.addEventListener('click', function() {
  });
 
 // Empty All fields function
- function empltyAllFields(){
+ function emptyAllFields(){
    guessedNumber.value = "";
    lastGuess.innerText = "";
    tooHighLow.innerText = "";
@@ -38,7 +42,7 @@ function compareGuess () {
     tooHighLow.innerText = "Too low! Try again!";
   } else  {
     alert ("ERROR: Enter a number between 0-100");
-    empltyAllFields();
+    emptyAllFields();
   }
 };
 
@@ -56,36 +60,27 @@ clearFieldButton.addEventListener('click', function() {
 
 //Reset Button event listener
  resetButton.addEventListener('click' , function() {
-   empltyAllFields();
-   randomNumber = randoNumber();
+   emptyAllFields();
+   randomNumber = newRandomNumber();
    document.querySelector(".reset-button").disabled = true;
  });
 
 // Create a new random number function
-function randoNumber() {
-  var randomNumber = Math.floor(Math.random() * 100 + 1)
-  return randomNumber;
-};
+// function newRandomNumber() {
+//   var randomNumber = Math.floor(Math.random() * 100 + 1)
+//   return randomNumber;
+// };
 
 function alertMessage () {
   var guessed = parseInt(guessedNumber.value);
   if (guessed < 0) {
     alert ("ERROR: Enter a number between 0 to 100");
-    empltyAllFields();
+    emptyAllFields();
   } else if (guessed > 100) {
     alert ("ERROR: Enter a number between 0 to 100");
-    empltyAllFields();
+    emptyAllFields();
   }
 };
-
-
-
-// function checkField() {
-//   if (guessedNumber !== ""){
-//   console.log("HEYYYY");
-// }
-// };
-// checkField();
 
 
 function clearButtonDisable() {
@@ -95,3 +90,11 @@ function clearButtonDisable() {
     document.querySelector(".clear-field").disabled = false;
   }
 };
+
+
+// Phase 3
+function newRandomNumber(min, max) {
+  min = Math.ceil(newMinValue);
+  max = Math.floor(newMaxValue);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
