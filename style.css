@@ -41,6 +41,20 @@ section {
   box-shadow: 0;
 }
 
+button:hover {
+  background-color: #EB008B;
+}
+
+button:active {
+  background-color: #929497;
+}
+
+button:focus {
+  outline: none !important;
+    border: 0px;
+    box-shadow: 0;
+}
+
 .submit-guess {
   background-color: #d0d2d3;
   color: #fff;
@@ -55,21 +69,6 @@ section {
   text-align: center;
 }
 
-.submit-guess:hover {
-  background-color: #EB008B;
-}
-
-.submit-guess:active {
-  background-color: #929497;
-}
-
-.submit-guess:focus {
-  outline: none !important;
-  border: 0px;
-  box-shadow: 0;
-}
-
-
 .clear-field {
   background-color: #d0d2d3;
   color: #fff;
@@ -82,24 +81,8 @@ section {
   font: 300 13px 'Open Sans', sans-serif;
   margin-top: 30px;
 }
-}
-
-.clear-field:active {
-  background-color: #929497;
-}
-
-.clear-field:hover {
-  background-color: #EB008B;
-}
-
-.clear-field:focus {
-  outline: none !important;
-  border: 0px;
-  box-shadow: 0;
-}
 
 /* your last guess - down */
-
 p {
   color: #404041;
   padding: 0px;
@@ -115,11 +98,6 @@ p {
 }
 
 /* Reset Button */
-
-
-
-
-
 .reset-button {
   background-color: #d0d2d3;
   color: #fff;
@@ -133,18 +111,4 @@ p {
   font: 300 13px 'Open Sans', sans-serif;
   text-align: center;
   margin-top: 30px;
-}
-
-.reset-button:hover {
-  background-color: #EB008B;
-}
-
-.reset-button:active {
-  background-color: #929497;
-}
-
-.reset-button:focus {
-  outline: none !important;
-  border: 0px;
-  box-shadow: 0;
 }
