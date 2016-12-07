@@ -37,6 +37,11 @@ section {
   font: 300 13px 'Open Sans', sans-serif;
 }
 
+#number-guesser:focus {
+  outline: none !important;
+  box-shadow: 0;
+}
+
 .submit-guess {
   background-color: #d0d2d3;
   color: #fff;
@@ -59,6 +64,12 @@ section {
   background-color: #929497;
 }
 
+.submit-guess:focus {
+  outline: none !important;
+  border: 0px;
+  box-shadow: 0;
+}
+
 
 .clear-field {
   background-color: #d0d2d3;
@@ -76,6 +87,16 @@ section {
 
 .clear-field:active {
   background-color: #929497;
+}
+
+.clear-field:hover {
+  background-color: #EB008B;
+}
+
+.clear-field:focus {
+  outline: none !important;
+  border: 0px;
+  box-shadow: 0;
 }
 
 /* your last guess - down */
@@ -96,9 +117,10 @@ p {
 
 /* Reset Button */
 
-.clear-field:hover {
-  background-color: #EB008B;
-}
+
+
+
+
 .reset-button {
   background-color: #d0d2d3;
   color: #fff;
@@ -120,4 +142,10 @@ p {
 
 .reset-button:active {
   background-color: #929497;
+}
+
+.reset-button:focus {
+  outline: none !important;
+  border: 0px;
+  box-shadow: 0;
 }

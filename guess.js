@@ -36,6 +36,7 @@ clearFieldButton.addEventListener('click', function() {
    guessedNumber.value = "";
    lastGuess.innerText = "";
    tooHighLow.innerText = "";
+   randomNumber = randoNumber();
  });
 
 
@@ -49,3 +50,9 @@ clearFieldButton.addEventListener('click', function() {
      alert('Guess a number between 0-100!');
    }
  };
+
+
+function randoNumber() {
+  var randomNumber = Math.floor(Math.random() * 100 + 1)
+  return randomNumber;
+};
