@@ -39,10 +39,12 @@ function compareGuess () {
 
   if (guessed === randomNumber) {
     tooHighLow.innerText = "BOOM!";
+    max + 10;
   } else if (guessed > randomNumber) {
     tooHighLow.innerText = "Too high! Try again!";
   } else if (guessed < randomNumber) {
     tooHighLow.innerText = "Too low! Try again!";
+    min - 10;
   } else  {
     alert ("ERROR: Enter a number between 0-100");
     emptyAllFields();
@@ -69,6 +71,11 @@ clearFieldButton.addEventListener('click', function() {
    randomNumber = newRandomNumber();
    document.querySelector(".reset-button").disabled = true;
  });
+
+function newRandomNumber() {
+  var randomNumber = Math.floor(Math.random() * 100 + 1)
+  return randomNumber;
+};
 
 
 function alertMessage () {
