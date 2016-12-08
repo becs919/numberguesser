@@ -33,15 +33,19 @@ function compareGuess () {
   if (guessed === randomNumber) {
     tooHighLow.innerText = "BOOM!";
     max = (max+10);
-    congratsMessage.innerText = ("Congratulations! Now your maximum range is increased by 10.");
+    min = (min-10);
+    congratsMessage.innerText = "Your new minimum is " +min+ " and maximum is " +max;
     randomNumber = newRandomNumber();
   } else if (guessed > randomNumber) {
     tooHighLow.innerText = "Too high! Try again!";
+    congratsMessage.innerText = "";
   } else if (guessed < randomNumber) {
     tooHighLow.innerText = "Too low! Try again!";
+    congratsMessage.innerText = "";
   } else  {
-    alert ("ERROR: Enter a number between 0-100");
+    alert ("ERROR: Enter a number between " +min+ " and " +max);
     emptyAllFields();
+    congratsMessage.innerText = "";
   }
 };
 // Clear button event listener
@@ -59,21 +63,22 @@ clearFieldButton.addEventListener('click', function() {
    emptyAllFields();
    randomNumber = newRandomNumber();
    max = 100;
+   min = 0;
    document.querySelector(".reset-button").disabled = true;
  });
 //Assign new random number function
 function newRandomNumber() {
-  var randomNumber = Math.floor(Math.random() * 100 + 1)
+  var randomNumber = Math.floor(Math.random() * (max - min)) + min;
   return randomNumber;
 };
 // Alert Message function
 function alertMessage () {
   var guessed = parseInt(guessedNumber.value);
-  if (guessed < 0) {
-    alert ("ERROR: Enter a number between 0 to 100");
+  if (guessed < min) {
+    alert ("ERROR: Enter a number between " +min+ " and " +max);
     emptyAllFields();
-  } else if (guessed > 100) {
-    alert ("ERROR: Enter a number between 0 to 100");
+  } else if (guessed > max) {
+    alert ("ERROR: Enter a number between " +min+ " and " +max);
     emptyAllFields();
   }
 };
