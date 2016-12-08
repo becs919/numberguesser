@@ -119,6 +119,32 @@ p {
   margin-top: 30px;
 }
 
+
+.new-value-button {
+  background-color: #d0d2d3;
+  color: #fff;
+  border-radius: 10%;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border: 0px;
+  width: 70px;
+  height: 20px;
+  margin: 15px;
+  font: 300 13px 'Open Sans', sans-serif;
+  text-align: center;
+}
+
+
+div {
+  padding: 20px;
+}
+
+.min-max {
+  outline: none !important;
+  box-shadow: 0;
+  font: 300 13px 'Open Sans', sans-serif;
+}
+
 /* MEDIA QUERIES!!!*/
 @media screen and (max-width: 320px) {
 #number-guesser {

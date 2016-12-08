@@ -13,8 +13,8 @@ var newMinValue = document.getElementById("min");
 var newMaxValue = document.getElementById("max");
 var newValueButton = document.querySelector(".new-value-button");
 
-var mainMax = 100;
-var mainMin = 0;
+var max = 100;
+var min = 0;
 
 
 
@@ -95,29 +95,15 @@ function clearButtonDisable() {
 };
 
 
-// Phase 3
-function newRandomNumber(min, max) {
-  min = Math.ceil(newMinValue);
-  max = Math.floor(newMaxValue);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+
+newValueButton.addEventListener("click", function(){
+  min = parseInt(newMinValue.value);
+  max = parseInt(newMaxValue.value);
+  randomNumber = changeRange(min, max);
+});
+
+
+function changeRange (min,max) {
+  console.log(min, max);
+  return Math.floor(Math.random() * (max - min)) + min;
 }
-
-function changeMin() {
-  if (newMinValue.value > 0) {
-    newMinValue.value = mainMin;
-  } else {
-    newMinValue.value = 0;
-  }
-};
-
-function changeMax() {
-  if (newMaxValue.value > 100) {
-    newMaxValue.value = mainMax;
-  } else {
-    newMaxValue.value = 100;
-  }
-};
-
-// newValueButton.addEventListener("click", function(){
-//
-// });
