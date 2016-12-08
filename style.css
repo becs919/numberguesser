@@ -3,8 +3,8 @@ body {
   text-align: center;
   margin: 0px;
 }
-/* HEADER */
-body header {
+/* HEADER*/
+header {
   background-color: #404041;
   height: 50px;
 }
@@ -42,15 +42,15 @@ button:active {
 }
 button:focus {
   outline: none !important;
-    border: 0px;
-    box-shadow: 0;
+  border: 0px;
+  box-shadow: 0;
 }
 .submit-guess {
   background-color: #d0d2d3;
   color: #fff;
-  border-radius: 10%;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  /*-moz-border-radius: 10px;
+  -webkit-border-radius: 10px;*/
   border: 0px;
   width: 70px;
   font: 300 13px 'Open Sans', sans-serif;
@@ -60,9 +60,9 @@ button:focus {
 .clear-field {
   background-color: #d0d2d3;
   color: #fff;
-  border-radius: 10%;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  /*-moz-border-radius: 10px;
+  -webkit-border-radius: 10px;*/
   border: 0px;
   width: 70px;
   font: 300 13px 'Open Sans', sans-serif;
@@ -84,9 +84,9 @@ p {
 .reset-button {
   background-color: #d0d2d3;
   color: #fff;
-  border-radius: 10%;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  /*-moz-border-radius: 10px;
+  -webkit-border-radius: 10px;*/
   border: 0px;
   width: 170px;
   margin: 15px;
@@ -101,9 +101,9 @@ div {
 .new-value-button {
   background-color: #d0d2d3;
   color: #fff;
-  border-radius: 10%;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  /*-moz-border-radius: 10px;
+  -webkit-border-radius: 10px;*/
   border: 0px;
   width: 170px;
   margin: 15px;
