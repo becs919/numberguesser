@@ -31,7 +31,8 @@ function compareGuess () {
 
   if (guessed === randomNumber) {
     tooHighLow.innerText = "BOOM!";
-    // max + 10;
+    max = (max+10);
+    alert ("Congratulations! Now your maximum range is increased by 10");
   } else if (guessed > randomNumber) {
     tooHighLow.innerText = "Too high! Try again!";
   } else if (guessed < randomNumber) {
@@ -56,6 +57,7 @@ clearFieldButton.addEventListener('click', function() {
  resetButton.addEventListener('click' , function() {
    emptyAllFields();
    randomNumber = newRandomNumber();
+   max = 100;
    document.querySelector(".reset-button").disabled = true;
  });
 //Assign new random number function
@@ -88,7 +90,7 @@ newValueButton.addEventListener("click", function(){
   max = parseInt(newMaxValue.value);
   randomNumber = changeRange(min, max);
 });
-// Console log new min and max 
+// Console log new min and max
 function changeRange (min,max) {
   console.log(min, max);
   return Math.floor(Math.random() * (max - min)) + min;
