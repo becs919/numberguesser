@@ -32,12 +32,12 @@ function compareGuess () {
   if (guessed === randomNumber) {
     tooHighLow.innerText = "BOOM!";
     max = (max+10);
-    alert ("Congratulations! Now your maximum range is increased by 10");
+    alert ("Congratulations! Now your maximum range is increased by 10. New maximum is max.value");
+    randomNumber = newRandomNumber();
   } else if (guessed > randomNumber) {
     tooHighLow.innerText = "Too high! Try again!";
   } else if (guessed < randomNumber) {
     tooHighLow.innerText = "Too low! Try again!";
-    // min - 10;
   } else  {
     alert ("ERROR: Enter a number between 0-100");
     emptyAllFields();
