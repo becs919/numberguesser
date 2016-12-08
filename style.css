@@ -69,8 +69,6 @@ button:focus {
   -webkit-border-radius: 10px;
   border: 0px;
   width: 70px;
-  height: 20px;
-  margin: 15px;
   font: 300 13px 'Open Sans', sans-serif;
   text-align: center;
 }
@@ -83,7 +81,6 @@ button:focus {
   -webkit-border-radius: 10px;
   border: 0px;
   width: 70px;
-  height: 20px;
   font: 300 13px 'Open Sans', sans-serif;
   margin-top: 30px;
 }
@@ -112,13 +109,13 @@ p {
   -webkit-border-radius: 10px;
   border: 0px;
   width: 170px;
-  height: 20px;
   margin: 15px;
   font: 300 13px 'Open Sans', sans-serif;
   text-align: center;
   margin-top: 30px;
 }
 
+/* Change Values Section*/
 
 .new-value-button {
   background-color: #d0d2d3;
@@ -127,8 +124,7 @@ p {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border: 0px;
-  width: 70px;
-  height: 20px;
+  width: 170px;
   margin: 15px;
   font: 300 13px 'Open Sans', sans-serif;
   text-align: center;
@@ -145,27 +141,52 @@ div {
   font: 300 13px 'Open Sans', sans-serif;
 }
 
+.choose-value {
+  margin-bottom: 15px;
+}
+
+
 /* MEDIA QUERIES!!!*/
 @media screen and (max-width: 320px) {
 #number-guesser {
     width: 100%;
     height: 5%;
     font-size: 115%;
-    margin-bottom: 10%;
-/*}
+    margin-bottom: 10px;
+}
+
+
 .submit-guess {
   width: 100%;
-
-  height: 30px;
+  height: 5%;
 }
 
 .clear-field {
   width: 100%;
   margin-top: 5%;
-  height: 30px;
-}*/
+  height: 5%;
+}
 
+.reset-button {
+  width: 80%;
+  height: 5%;
+}
 
+.new-value-button {
+  width: 90%;
+  height: 5%;
+}
+
+.min-max {
+  width: 100%;
+  height: 5%;
+  font-size: 115%;
+  margin-bottom: 10px;
+}
+
+.choose-value {
+  margin: 5%;
+}
 
 
 }
