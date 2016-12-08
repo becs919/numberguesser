@@ -52,6 +52,8 @@ function compareGuess () {
 // Clear button event listener
 clearFieldButton.addEventListener('click', function() {
   guessedNumber.value = "";
+  newMaxValue.value = "";
+  newMinValue.value = "";
   document.querySelector(".clear-field").disabled = true;
  });
 
@@ -68,11 +70,6 @@ clearFieldButton.addEventListener('click', function() {
    document.querySelector(".reset-button").disabled = true;
  });
 
-// Create a new random number function
-// function newRandomNumber() {
-//   var randomNumber = Math.floor(Math.random() * 100 + 1)
-//   return randomNumber;
-// };
 
 function alertMessage () {
   var guessed = parseInt(guessedNumber.value);
