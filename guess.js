@@ -10,6 +10,7 @@ var newMaxValue = document.getElementById("max");
 var newValueButton = document.querySelector(".new-value-button");
 var max = 100;
 var min = 0;
+var congratsMessage = document.querySelector(".congrats");
 
 
 // Submit Button Event Listener
@@ -32,7 +33,7 @@ function compareGuess () {
   if (guessed === randomNumber) {
     tooHighLow.innerText = "BOOM!";
     max = (max+10);
-    alert ("Congratulations! Now your maximum range is increased by 10. New maximum is max.value");
+    congratsMessage.innerText = ("Congratulations! Now your maximum range is increased by 10.");
     randomNumber = newRandomNumber();
   } else if (guessed > randomNumber) {
     tooHighLow.innerText = "Too high! Try again!";
